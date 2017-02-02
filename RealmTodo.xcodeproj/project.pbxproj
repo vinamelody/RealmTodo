@@ -13,6 +13,9 @@
 		5A208A081E42229B00A95105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A208A071E42229B00A95105 /* Assets.xcassets */; };
 		5A208A0B1E42229B00A95105 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A208A091E42229B00A95105 /* LaunchScreen.storyboard */; };
 		5A208A141E42306400A95105 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A208A131E42306400A95105 /* Task.swift */; };
+		5AC2EEDF1E437E0600F7A456 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2EEDE1E437E0600F7A456 /* TasksTableViewController.swift */; };
+		5AC2EEE11E437E2500F7A456 /* CreateTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2EEE01E437E2500F7A456 /* CreateTaskTableViewController.swift */; };
+		5AC2EEE31E437E3800F7A456 /* MyTasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2EEE21E437E3800F7A456 /* MyTasksTableViewController.swift */; };
 		858DC20E11192B9EF9A2292E /* Pods_RealmTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E12186E028BD7ADC65FA68 /* Pods_RealmTodo.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 		5A208A0A1E42229B00A95105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A208A0C1E42229B00A95105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A208A131E42306400A95105 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = models/Task.swift; sourceTree = "<group>"; };
+		5AC2EEDE1E437E0600F7A456 /* TasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksTableViewController.swift; path = viewcontrollers/TasksTableViewController.swift; sourceTree = "<group>"; };
+		5AC2EEE01E437E2500F7A456 /* CreateTaskTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTaskTableViewController.swift; path = viewcontrollers/CreateTaskTableViewController.swift; sourceTree = "<group>"; };
+		5AC2EEE21E437E3800F7A456 /* MyTasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTasksTableViewController.swift; path = viewcontrollers/MyTasksTableViewController.swift; sourceTree = "<group>"; };
 		9A44567EE2738F01D87AF6CC /* Pods-RealmTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmTodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmTodo/Pods-RealmTodo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +69,7 @@
 		5A2089FF1E42229B00A95105 /* RealmTodo */ = {
 			isa = PBXGroup;
 			children = (
+				5AC2EEDD1E437DDE00F7A456 /* ViewControllers */,
 				5A208A121E42304D00A95105 /* Models */,
 				5A208A001E42229B00A95105 /* AppDelegate.swift */,
 				5A208A021E42229B00A95105 /* ViewController.swift */,
@@ -80,6 +87,16 @@
 				5A208A131E42306400A95105 /* Task.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		5AC2EEDD1E437DDE00F7A456 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AC2EEDE1E437E0600F7A456 /* TasksTableViewController.swift */,
+				5AC2EEE01E437E2500F7A456 /* CreateTaskTableViewController.swift */,
+				5AC2EEE21E437E3800F7A456 /* MyTasksTableViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		7898DB64F0E0D7A494C35190 /* Frameworks */ = {
@@ -225,6 +242,9 @@
 			files = (
 				5A208A031E42229B00A95105 /* ViewController.swift in Sources */,
 				5A208A141E42306400A95105 /* Task.swift in Sources */,
+				5AC2EEDF1E437E0600F7A456 /* TasksTableViewController.swift in Sources */,
+				5AC2EEE11E437E2500F7A456 /* CreateTaskTableViewController.swift in Sources */,
+				5AC2EEE31E437E3800F7A456 /* MyTasksTableViewController.swift in Sources */,
 				5A208A011E42229B00A95105 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
