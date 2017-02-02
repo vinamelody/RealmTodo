@@ -38,11 +38,11 @@
             </objects>
             <point key="canvasLocation" x="1737" y="112"/>
         </scene>
-        <!--Item-->
+        <!--Tasks-->
         <scene sceneID="jtK-iG-uZJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lmQ-Ie-gWy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Otw-rK-FeO"/>
+                    <tabBarItem key="tabBarItem" title="Tasks" image="tab-tasks" selectedImage="tab-tasks" id="Otw-rK-FeO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dh4-EV-xNe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -86,11 +86,11 @@
             </objects>
             <point key="canvasLocation" x="1737" y="803"/>
         </scene>
-        <!--Item-->
+        <!--My Tasks-->
         <scene sceneID="S7Z-Q7-ufk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WLu-3V-Mp3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="VTn-yW-I5g"/>
+                    <tabBarItem key="tabBarItem" title="My Tasks" image="tab-me" selectedImage="tab-me" id="VTn-yW-I5g"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Ct-0m-Q5x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -124,4 +124,8 @@
             <point key="canvasLocation" x="71" y="505"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab-me" width="25" height="25"/>
+        <image name="tab-tasks" width="25" height="25"/>
+    </resources>
 </document>
