@@ -13,6 +13,7 @@
 		5A208A081E42229B00A95105 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A208A071E42229B00A95105 /* Assets.xcassets */; };
 		5A208A0B1E42229B00A95105 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A208A091E42229B00A95105 /* LaunchScreen.storyboard */; };
 		5A208A141E42306400A95105 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A208A131E42306400A95105 /* Task.swift */; };
+		5A6F91D91E460FBD00EF956A /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F91D81E460FBD00EF956A /* TaskCell.swift */; };
 		5AC2EEDF1E437E0600F7A456 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2EEDE1E437E0600F7A456 /* TasksTableViewController.swift */; };
 		5AC2EEE11E437E2500F7A456 /* CreateTaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2EEE01E437E2500F7A456 /* CreateTaskTableViewController.swift */; };
 		5AC2EEE31E437E3800F7A456 /* MyTasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC2EEE21E437E3800F7A456 /* MyTasksTableViewController.swift */; };
@@ -30,6 +31,7 @@
 		5A208A0A1E42229B00A95105 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A208A0C1E42229B00A95105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A208A131E42306400A95105 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = models/Task.swift; sourceTree = "<group>"; };
+		5A6F91D81E460FBD00EF956A /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskCell.swift; path = viewcontrollers/TaskCell.swift; sourceTree = "<group>"; };
 		5AC2EEDE1E437E0600F7A456 /* TasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TasksTableViewController.swift; path = viewcontrollers/TasksTableViewController.swift; sourceTree = "<group>"; };
 		5AC2EEE01E437E2500F7A456 /* CreateTaskTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTaskTableViewController.swift; path = viewcontrollers/CreateTaskTableViewController.swift; sourceTree = "<group>"; };
 		5AC2EEE21E437E3800F7A456 /* MyTasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyTasksTableViewController.swift; path = viewcontrollers/MyTasksTableViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				5AC2EEDE1E437E0600F7A456 /* TasksTableViewController.swift */,
 				5AC2EEE01E437E2500F7A456 /* CreateTaskTableViewController.swift */,
 				5AC2EEE21E437E3800F7A456 /* MyTasksTableViewController.swift */,
+				5A6F91D81E460FBD00EF956A /* TaskCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A208A031E42229B00A95105 /* ViewController.swift in Sources */,
+				5A6F91D91E460FBD00EF956A /* TaskCell.swift in Sources */,
 				5A208A141E42306400A95105 /* Task.swift in Sources */,
 				5AC2EEDF1E437E0600F7A456 /* TasksTableViewController.swift in Sources */,
 				5AC2EEE11E437E2500F7A456 /* CreateTaskTableViewController.swift in Sources */,
