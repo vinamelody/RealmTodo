@@ -39,6 +39,8 @@ class TasksTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell") as! TaskCell
         cell.title.text = task.title
+        cell.priority.text = task.priorityText
+        cell.priority.textColor = task.priorityColor
         return cell
     }
     
