@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TasksTableViewController: UITableViewController {
     
     @IBOutlet weak var filterToggle: UIBarButtonItem!
     
-    var tasks = [String]()
+    var tasks: Results<Task>!
+    
+    override func viewDidLoad() {
+        let realm = try! Realm()
+        tasks = realm.objects(Task)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
     
     
     @IBAction func filterToggleTapped(_ sender: UIBarButtonItem) {
@@ -24,7 +35,10 @@ class TasksTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let task = tasks[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell") as! TaskCell
+        cell.title.text = task.title
         return cell
     }
     
