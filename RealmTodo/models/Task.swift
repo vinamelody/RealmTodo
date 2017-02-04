@@ -29,4 +29,22 @@ class Task: Object {
     override class func ignoredProperties() -> [String] {
         return []
     }
+    
+    convenience init(title: String, priority: Int) {
+        self.init()
+        self.title = title
+        self.priority = priority
+    }
+}
+
+
+extension Task {
+    
+    var priorityText: String {
+        return priority > 0 ? "High" : "Default"
+    }
+    
+    var priorityColor: UIColor {
+        return priority > 0 ? UIColor.red : UIColor.blue
+    }
 }
