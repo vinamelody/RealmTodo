@@ -176,6 +176,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8R-Ab-46U">
                                                     <rect key="frame" x="268" y="7" width="82" height="30"/>
                                                     <state key="normal" title="Create Task"/>
+                                                    <connections>
+                                                        <action selector="createTask:" destination="9V0-6n-HwT" eventType="touchUpInside" id="m0l-pF-S7x"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -193,6 +196,11 @@
                         </connections>
                     </tableView>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="taskPriority" destination="dNn-xs-LWR" id="71E-Bf-WlX"/>
+                        <outlet property="taskTitle" destination="RBs-sw-aqT" id="EqD-aj-88Q"/>
+                        <outlet property="taskUsers" destination="0xB-vg-Q0X" id="AJh-wi-Mjn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wto-Ac-nWu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
