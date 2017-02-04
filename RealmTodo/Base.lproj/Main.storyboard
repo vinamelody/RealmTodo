@@ -14,18 +14,61 @@
         <scene sceneID="esY-3S-dUa">
             <objects>
                 <tableViewController title="Tasks" id="Sv0-zS-b7l" customClass="TasksTableViewController" customModule="RealmTodo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="N2r-UE-JG5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="N2r-UE-JG5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="elI-JW-DLk">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" id="elI-JW-DLk" customClass="TaskCell">
+                                <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="elI-JW-DLk" id="Ngf-ss-hBN">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jST-ky-g5Q">
+                                            <rect key="frame" x="8" y="5" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="62u-Zl-nE7"/>
+                                                <constraint firstAttribute="width" constant="40" id="7lH-dz-8Se"/>
+                                            </constraints>
+                                            <state key="normal" image="check-empty"/>
+                                            <connections>
+                                                <action selector="checkButtonTapped:" destination="elI-JW-DLk" eventType="touchUpInside" id="X5E-oT-7OQ"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzm-k6-c7Y">
+                                            <rect key="frame" x="51" y="8" width="308" height="19"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="19" id="suX-HC-3sC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4L-by-Ygd">
+                                            <rect key="frame" x="51" y="29" width="308" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Dzm-k6-c7Y" secondAttribute="trailing" constant="8" id="1vk-MM-J1x"/>
+                                        <constraint firstItem="p4L-by-Ygd" firstAttribute="leading" secondItem="Dzm-k6-c7Y" secondAttribute="leading" id="7ef-s7-RFR"/>
+                                        <constraint firstItem="Dzm-k6-c7Y" firstAttribute="leading" secondItem="jST-ky-g5Q" secondAttribute="trailing" constant="3" id="Bs6-Hh-5Lo"/>
+                                        <constraint firstItem="p4L-by-Ygd" firstAttribute="width" secondItem="Dzm-k6-c7Y" secondAttribute="width" id="D8l-8I-zDA"/>
+                                        <constraint firstItem="jST-ky-g5Q" firstAttribute="centerY" secondItem="Ngf-ss-hBN" secondAttribute="centerY" id="LZx-Cl-ZAM"/>
+                                        <constraint firstAttribute="topMargin" secondItem="Dzm-k6-c7Y" secondAttribute="top" id="NyX-Pd-icK"/>
+                                        <constraint firstItem="p4L-by-Ygd" firstAttribute="top" secondItem="Dzm-k6-c7Y" secondAttribute="bottom" constant="2" id="SOv-ey-oxZ"/>
+                                        <constraint firstItem="jST-ky-g5Q" firstAttribute="leading" secondItem="Ngf-ss-hBN" secondAttribute="leadingMargin" id="UbA-q2-7rb"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkButton" destination="jST-ky-g5Q" id="lKv-UG-Qem"/>
+                                    <outlet property="priority" destination="p4L-by-Ygd" id="XbG-iE-m3z"/>
+                                    <outlet property="title" destination="Dzm-k6-c7Y" id="OPq-1g-uHv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -34,16 +77,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tasks" id="bEA-mn-BQV">
-                        <barButtonItem key="leftBarButtonItem" image="check-full" id="iXz-Iy-PMH"/>
+                        <barButtonItem key="leftBarButtonItem" image="check-full" id="iXz-Iy-PMH">
+                            <connections>
+                                <action selector="filterToggleTapped:" destination="Sv0-zS-b7l" id="ecV-iZ-a7m"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vqG-HM-zIc"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="filterToggle" destination="iXz-Iy-PMH" id="uB6-dw-gRl"/>
                         <segue destination="9V0-6n-HwT" kind="show" id="BuQ-fT-orY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hj7-ln-VcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1780" y="112"/>
+            <point key="canvasLocation" x="1780" y="111.99400299850076"/>
         </scene>
         <!--New Task-->
         <scene sceneID="HgA-rD-qGP">
@@ -294,6 +342,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="check-empty" width="22" height="22"/>
         <image name="check-full" width="22" height="22"/>
         <image name="tab-me" width="25" height="25"/>
         <image name="tab-tasks" width="25" height="25"/>
