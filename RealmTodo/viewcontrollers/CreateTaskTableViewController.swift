@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 
 class CreateTaskTableViewController: UITableViewController {
     
@@ -16,6 +16,13 @@ class CreateTaskTableViewController: UITableViewController {
     @IBOutlet weak var taskUsers: UISegmentedControl!
     
     @IBAction func createTask(_ sender: Any) {
+        let realm = try! Realm()
+        let task = Task(title: taskTitle.text!, priority: taskPriority.selectedSegmentIndex)
+        
+        try! realm.write {
+            realm.add(task)
+        }
+        
         navigationController!.popViewController(animated: true)
     }
     
